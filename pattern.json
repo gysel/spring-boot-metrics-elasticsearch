@@ -1,0 +1,20 @@
+{
+  "index_patterns": [
+    "micrometer-metrics*"
+  ],
+  "template": {
+    "settings": {
+      "number_of_shards": 1
+    },
+    "mappings": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        }
+      }
+    }
+  }
+}

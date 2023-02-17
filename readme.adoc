@@ -1,0 +1,17 @@
+= Micrometer ElasticSearch Registry
+
+[source,bash]
+----
+docker-compose up -d
+curl -X PUT http://localhost:9200/_index_template/micrometer \
+  -H "Content-Type: application/json" \
+  -d @pattern.json
+./gradlew bootRun
+----
+
+- Kibana: http://localhost:5601
+- App: http://localhost:8080
+
+== Kibana configuration
+
+. Create a http://localhost:5601/app/management/kibana/dataViews[data view] with an index pattern `micrometer-metrics*`.
