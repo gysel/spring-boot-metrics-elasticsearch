@@ -1,6 +1,6 @@
 {
   "index_patterns": [
-    "micrometer-metrics*"
+    "micrometer*"
   ],
   "template": {
     "settings": {
